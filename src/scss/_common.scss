@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  font-family: var(--font-family, sans-serif);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  width: calc(100% - 100px);
+  max-width: 1290px;
+
+  @include tablet {
+    width: calc(100% - 62px);
+  }
+
+  @include minitablet {
+    width: calc(100% - 53px);
+  }
+
+  @include mobile {
+    width: calc(100% - 42px);
+  }
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.title-bold {
+  font-family: 'TT-Firs-Neue';
+  font-size: 24px;
+  font-weight: 700;
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 19px;
+  }
+}
+
+.title-regular {
+  font-family: 'TT-Firs-Neue';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 22px;
+
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+.text-silver {
+  margin: 0;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--silver-color);
+}
+
+.text-gray {
+  margin: 0;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--gray-color);
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.text-black {
+  margin: 0;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--black-color);
+}
+
+.text-white {
+  margin: 0;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--white-color);
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.input {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--gray-color);
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &:focus-visible:not(:active) {
+    outline: 1px solid var(--orange-color);
+  }
+
+  &:hover::placeholder {
+    color: var(--orange-color);
+    transition: color .3s ease;
+  }
+
+  &:focus-visible::placeholder {
+    color: transparent;
+  }
+}
+
+.hashtag {
+  padding: 8px 14px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: var(--white-color);
+  background-color: var(--black-color);
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+:active, :hover, :focus-visible {
+  outline: none;
+}
+
+.phone-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--orange-color);
+  transition: color .3s ease-in-out;
+
+  svg {
+    fill: var(--orange-color);
+    transition: fill .3s ease-in-out;
+  }
+
+  @include desktop {
+    &:hover:not(:active) {
+      color: var(--orange-focus-color);
+    }
+  }
+
+  &:active {
+    color: var(--orange-active-color);
+  }
+}
+
+.phone {
+  &:focus-within {
+    svg {
+      fill: var(--orange-focus-color);
+    }
+  }
+
+  &:focus {
+    color: var(--orange-focus-color);
+  }
+
+  @include desktop {
+    &:hover {
+      svg {
+        fill: var(--orange-focus-color);
+      }
+    }
+  }
+
+  &:active {
+    svg {
+      fill: var(--orange-active-color);
+    }
+  }
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}

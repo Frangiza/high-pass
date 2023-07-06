@@ -1,0 +1,383 @@
+.projects {
+  &__container {
+    padding: 72px 0 70px;
+
+    @include tablet {
+      padding-bottom: 68px;
+    }
+
+    @include minitablet {
+      padding-bottom: 70px;
+    }
+
+    @include mobile {
+      padding-top: 50px;
+      padding-bottom: 37px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 12px;
+
+    @include mobile {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+
+    @include high-desktop {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include tablet {
+      gap: 24px;
+    }
+
+    @include minitablet {
+      grid-template-columns: repeat(6, 1fr);
+      gap: var(--grid-gap);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(3) {
+      @include high-desktop {
+        grid-column: 4 span;
+      }
+
+      @include minitablet {
+        grid-column: 2 span;
+      }
+    }
+
+    &:nth-child(5) {
+      @include high-desktop {
+        grid-column: 4 / 5 span;
+        grid-row: 3;
+      }
+
+      @include minitablet {
+        grid-column: 6 span;
+        grid-row: 4;
+      }
+
+      @include mobile {
+        grid-column: 2 span;
+        grid-row: 7;
+      }
+    }
+  }
+
+  &__item--small {
+    grid-column: 2 span;
+    min-height: 300px;
+
+    // @include high-desktop {
+    //   &:nth-child(3) {
+    //     grid-column: 4 span;
+    //   }
+    // }
+
+    @include tablet {
+      min-height: 285px;
+    }
+
+    // @include minitablet {
+    //   &:nth-child(3) {
+    //     grid-column: 2 span;
+    //   }
+    // }
+
+    @include mobile {
+      grid-column: 2 span;
+      min-height: 278px;
+    }
+  }
+
+  &__item--big {
+    grid-column: 6 span;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+
+    @include high-desktop {
+      grid-column: 5 span;
+      padding-top: 30px;
+      padding-bottom: 37px;
+
+      // &:nth-child(5) {
+      //   @include high-desktop {
+      //     grid-column: 4 / 5 span;
+      //     grid-row: 3;
+      //   }
+      // }
+    }
+
+    @include tablet {
+      padding-top: 28px;
+    }
+
+    @include minitablet {
+      grid-column: 6 span;
+      padding-top: 23px;
+      padding-left: 30px;
+      padding-bottom: 27px;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+      padding-top: 196px;
+      padding-left: 29px;
+    }
+  }
+
+  &__item--big-1 {
+    background-image: url(../img/project-fuji.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include high-desktop {
+      background-image: url(../img/project-fuji-1024.jpg);
+    }
+
+    @include minitablet {
+      background-image: url(../img/project-fuji-768.jpg);
+    }
+
+    @include mobile {
+      background-image: url(../img/project-fuji-320.jpg);
+    }
+  }
+
+  &__item--big-2 {
+    background-image: url(../img/project-oblivion.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include high-desktop {
+      background-image: url(../img/project-oblivion-1024.jpg);
+    }
+
+    @include minitablet {
+      background-image: url(../img/project-oblivion-768.jpg);
+    }
+
+    @include mobile {
+      padding-right: 35px;
+      background-image: url(../img/project-oblivion-320.jpg);
+    }
+  }
+
+  &__item--middle {
+    grid-column: 3 span;
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  &__item-big-descr {
+    display: flex;
+    flex-direction: column;
+    max-width: 293px;
+    min-height: 245px;
+
+    @include high-desktop {
+      min-height: 265px;
+    }
+
+    @include tablet {
+      min-height: 243px;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+      min-height: 197px;
+    }
+  }
+
+  // &__item-big-bottom {
+  //   display: flex;
+  //   flex-direction: column;
+  //   max-width: 293px;
+  //   min-height: 245px;
+  // }
+
+  &__image {
+    margin-bottom: 18px;
+  }
+
+  &__image--middle {
+    margin-bottom: 18px;
+  }
+
+  &__descr {
+    margin-bottom: 10px;
+
+    @include tablet {
+      margin-bottom: 12px;
+    }
+
+    @include minitablet {
+      margin-bottom: 10px;
+    }
+
+    @include mobile {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__descr--bottom {
+    @include minitablet {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__descr-1920 {
+    @include high-desktop {
+      display: none;
+    }
+
+    @include minitablet {
+      display: block;
+    }
+  }
+
+  &__descr-1024 {
+    display: none;
+
+    @include high-desktop {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    @include tablet {
+      margin-bottom: 12px;
+    }
+
+    @include minitablet {
+      display: none;
+    }
+  }
+
+  .date {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: var(--gray-color);
+  }
+
+  .date--white {
+    color: var(--white-color);
+  }
+
+  &__svg {
+    margin-right: 5px;
+    width: 12px;
+    height: 13px;
+    fill: var(--gray-color);
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  &__date--white {
+    margin-top: 0;
+    margin-bottom: 3px;
+    color: var(--white-color);
+
+    svg {
+      fill: var(--white-color);
+    }
+
+    @include mobile {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 5px;
+    line-height: 24px;
+    color: var(--white-color);
+
+    @include mobile {
+      margin-bottom: 7px;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  &__btn {
+    align-self: start;
+    margin-top: auto;
+  }
+
+  &__item-hashtag {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    padding: 7px 14px;
+
+    @include mobile {
+      top: 5px;
+      right: 5px;
+      padding: 5px 15px;
+    }
+  }
+
+  &__hashtag-4 {
+    @include minitablet {
+      top: 1px;
+      right: 8px;
+    }
+
+    @include mobile {
+      top: 4px;
+      right: 4px;
+    }
+  }
+
+  &__hashtag-5 {
+    @include minitablet {
+      top: 0;
+      right: 7px;
+    }
+
+    @include mobile {
+      top: 3px;
+      right: 3px;
+    }
+  }
+
+  &__item-hashtag--bottom {
+    top: 4px;
+
+    @include mobile {
+      top: 7px;
+    }
+  }
+}

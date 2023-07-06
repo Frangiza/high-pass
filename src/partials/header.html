@@ -1,0 +1,65 @@
+<header class="header">
+  <div class="container header__container grid">
+    <div class="header__left">
+      <a class="header__logo link">
+        <img src="img/Logo.svg" alt="Логотип High Pass">
+      </a>
+    </div>
+    <nav class="nav menu-wrap" data-menu>
+      <div class="menu-wrapper">
+        <div class="nav__btn"><button class="btn-reset burger-close" aria-label="Закрыть меню" data-menu-close></button></div>
+        <ul class="nav__list menu list-reset flex">
+          <li class="nav__item"><a class="nav__link header-focus link" data-menu-item data-scroll
+              href="#about">О студии</a>
+          </li>
+          <li class="nav__item"><a class="nav__link header-focus link" data-menu-item data-scroll
+              href="#projects">Наши
+              проекты</a>
+          </li>
+          <li class="nav__item"><a class="nav__link header-focus link" data-menu-item data-scroll
+              href="#services">Услуги</a>
+          </li>
+          <li class="nav__item"><a class="nav__link header-focus link" data-menu-item data-scroll
+              href="#workshops">Мастер-классы</a></li>
+          <li class="nav__item"><a class="nav__link header-focus link" data-menu-item data-scroll
+              href="#contacts">Контакты</a></li>
+        </ul>
+        <div class="nav__phone phone">
+          <a href="tel:+749542423532" class="nav__phone-link phone-link link">
+            <svg class="nav__phone-svg">
+              <use xlink:href="img/sprite.svg#tel"></use>
+            </svg>
+            +7 495 424-23-532
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="header__right">
+      <button class="header__search-btn js-open-search btn-reset" aria-label="Найти">
+        <svg class="header__search-svg">
+          <use xlink:href="img/sprite.svg#Search"></use>
+        </svg>
+      </button>
+      <form class="header__form js-header-form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+        <label>
+          <span class="visually-hidden">Поиск по сайту</span>
+          <input class="header__search-text" type="text" name="search" placeholder="Что будем иcкать?">
+        </label>
+        <button class="header__close-btn js-close btn-reset" aria-label="Закрыть поиск" type="button">
+          <svg class="header__close-svg">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container header__burger">
+      <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,158 @@
+.footer {
+  background-color: var(--black-color);
+
+  @include mobile {
+    position: relative;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    min-height: 105px;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      padding: 30px 0 14px;
+      min-height: 185px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      margin-right: 65px;
+    }
+
+    @include mobile {
+      position: relative;
+      z-index: 2;
+      margin-right: 0;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 8px;
+
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__logo-svg {
+    width: 190px;
+    height: 30px;
+
+    @include tablet {
+      display: inline-block;
+      width: 166px;
+      height: 27px;
+    }
+
+    @include mobile {
+      width: 113px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+
+  &__left-text {
+    font-family: 'TT-Firs-Neue';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #E9E9E9;
+
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      font-size: 10px;
+      line-height: 10px;
+    }
+  }
+
+  &__middle {
+    max-width: 361px;
+
+    @include high-tablet {
+      display: none;
+    }
+  }
+
+  &__middle-text {
+    line-height: 22px;
+  }
+
+  &__right {
+    justify-content: start;
+  }
+
+  &__right-text {
+    display: flex;
+    margin-bottom: 7px;
+    line-height: 22px;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__list {
+    justify-content: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__item-link {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    svg {
+      fill: var(--silver-color);
+      transition: fill 0.3s ease-in-out;
+      pointer-events: none;
+    }
+
+    &:focus {
+      svg {
+        fill: var(--orange-focus-color);
+      }
+    }
+
+    @include desktop {
+      &:hover {
+        svg {
+          fill: var(--orange-color);
+        }
+      }
+    }
+
+    &:active {
+      svg {
+        fill: var(--orange-active-color);
+      }
+    }
+  }
+
+  &__backgr-mobile {
+    display: none;
+
+    @include mobile {
+      position: absolute;
+      z-index: 1;
+      top: 122px;
+      display: block;
+      width: 100%;
+      min-height: 80px;
+      background-color: var(--dark-gray-color);
+    }
+  }
+}

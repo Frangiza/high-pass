@@ -1,0 +1,150 @@
+.about {
+  background-color: var(--black-color);
+
+  &__container {
+    padding: 11px 0 50px;
+
+    @include tablet {
+      padding-bottom: 82px;
+    }
+
+    @include minitablet {
+      padding-bottom: 61px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    line-height: 31px;
+    color: var(--white-color);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+
+    @include high-desktop {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include high-mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      gap: 18px;
+    }
+  }
+
+  &__descr {
+    grid-column: 6 span;
+
+    @include high-desktop {
+      grid-column: 4 span;
+    }
+
+    @include high-mobile {
+      grid-column: 2 span;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+
+  &__subscr {
+    grid-column: 6 span;
+
+    @include high-desktop {
+      grid-column: 4 span;
+    }
+
+    @include high-mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  &__form-subtitle {
+    margin: 0;
+    margin-bottom: 16px;
+    color: var(--white-color);
+  }
+
+  &__image {
+    margin-bottom: 23px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include minitablet {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__form {
+    align-items: flex-start;
+  }
+
+  &__form-label {
+    position: relative;
+    margin-bottom: 19px;
+
+    .just-validate-error-field {
+      border: 1px solid var(--sienna-color);
+
+      &:focus-visible:not(:active) {
+        outline: none;
+      }
+    }
+
+    .just-validate-error-label {
+      position: absolute;
+      top: 3px;
+      left: 23px;
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-size: 9px;
+      line-height: 11px;
+      color: var(--sienna-color) !important;
+    }
+  }
+
+  &__form-input {
+    margin-right: 30px;
+    padding-left: 23px;
+    border: none;
+    width: 474px;
+    height: 50px;
+    color: var(--silver-color);
+    background-color: #4A4A4A;
+
+    @include desktop-1400 {
+      margin-bottom: 20px;
+    }
+
+    @include tablet {
+      margin-bottom: 0;
+      width: 342px;
+    }
+
+    @include minitablet {
+      width: 315px;
+    }
+
+    @include high-mobile {
+      width: 355px;
+    }
+
+    @include mobile {
+      width: 280px;
+      height: 40px;
+    }
+  }
+}

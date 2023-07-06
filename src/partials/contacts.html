@@ -1,0 +1,52 @@
+<section class="contacts" id="contacts">
+  <div class="container contacts__container">
+    <h2 class="contacts__title title-bold">Контакты</h2>
+    <div class="contacts__content">
+      <div class="contacts__map">
+        <div class="contacts__address">
+          <button class="contacts__close-btn btn-reset" aria-label="Закрыть контакты студии">
+            <svg class="contacts__close-svg">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="contacts__address-text">
+            <span class="contacts__address-name title-regular">Студия &laquo;High pass&raquo;</span>
+            <div class="contacts__address-street text-silver">107045, Москва, Даев переулок, дом&nbsp;41,
+              бизнес-центр &laquo;Даев Плаза&raquo;, этаж&nbsp;8, офис &#8470;&nbsp;82</div>
+            <div class="contacts__phone phone">
+              <a class="contacts__phone-number phone-link link" href="tel:+749542423532">
+                <svg class="contacts__svg-phone">
+                  <use xlink:href="img/sprite.svg#tel"></use>
+                </svg>
+                +7 495 424-23-532
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="map" id="map"></div>
+      </div>
+      <div class="contacts__submit">
+        <h3 class="contacts__submit-subtitle title-regular">Оставить заявку</h3>
+        <p class="contacts__submit-text text-gray">Оставьте ваши данные, указав в&nbsp;графе &laquo;Комментарий&raquo;
+          желаемые время и&nbsp;дату съёмки или&nbsp;другого мероприятия</p>
+        <form class="contacts__form form" action="#" method="post">
+          <label class="contacts__form-label">
+            <span class="visually-hidden">Введите имя</span>
+            <input class="contacts__input contacts__input-name input" type="text" required name="name" placeholder="Имя">
+          </label>
+          <label class="contacts__form-label">
+            <span class="visually-hidden">Введите email</span>
+            <input class="contacts__input contacts__input-mail input" id="mail" type="email" required name="mail" placeholder="Email">
+          </label>
+          <label class="contacts__form-label">
+            <span class="visually-hidden">Введите комментарий</span>
+            <textarea class="contacts__input contacts__form-text input" name="textarea" placeholder="Комментарий"></textarea>
+          </label>
+          <button class="contacts__form-btn btn btn--fill btn-reset" aria-label="Отправить заявку" type="submit">
+            <span>Отправить</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

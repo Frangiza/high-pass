@@ -1,0 +1,74 @@
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 3px var(--orange-color);
+  outline-offset: 0px;
+  padding: 15px 22px;
+  min-width: 121px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--white-color);
+  transition: background-color .3s ease-in-out;
+
+  @include mobile {
+    padding: 12px 23px;
+    min-width: 116px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.btn--fill {
+  box-shadow: none;
+  background-color: var(--orange-color);
+  transition: background-color .3s ease-in-out;
+
+  &:focus-visible {
+    outline: 3px solid var(--orange-focus-color);
+  }
+
+  @include desktop {
+    &:hover:not(:active) {
+      background-color: var(--orange-focus-color);
+    }
+  }
+
+  &:active:not(:hover) {
+    background-color: var(--orange-active-color);
+  }
+
+  @include mobile {
+    padding: 12px 23px;
+  }
+}
+
+.btn--not-fill {
+  &:focus-visible {
+    background-color: var(--orange-focus-color);
+  }
+
+  @include desktop {
+    &:hover:not(:active) {
+      background-color: var(--orange-color);
+    }
+  }
+
+  &:active:not(:hover) {
+    box-shadow: none;
+    background-color: var(--orange-active-color);
+  }
+
+  @include mobile {
+    min-width: 113px;
+  }
+}
